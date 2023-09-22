@@ -56,30 +56,38 @@ The [arithmetic mean][arithmetic-mean] is defined as
 
 <!-- /.intro -->
 
-<section class="installation">
 
-## Installation
-
-```bash
-npm install @stdlib/stats-base-dsnanmean
-```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
--   If you are using Deno, visit the [`deno` branch][deno-url].
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-</section>
 
 <section class="usage">
 
 ## Usage
 
+To use in Observable,
+
 ```javascript
-var dsnanmean = require( '@stdlib/stats-base-dsnanmean' );
+dsnanmean = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dsnanmean@umd/browser.js' )
+```
+
+To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
+
+```javascript
+var dsnanmean = require( 'path/to/vendor/umd/stats-base-dsnanmean/index.js' )
+```
+
+To include the bundle in a webpage,
+
+```html
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dsnanmean@umd/browser.js"></script>
+```
+
+If no recognized module system is present, access bundle contents via the global scope:
+
+```html
+<script type="text/javascript">
+(function () {
+    window.dsnanmean;
+})();
+</script>
 ```
 
 #### dsnanmean( N, x, stride )
@@ -185,11 +193,16 @@ var v = dsnanmean.ndarray( N, x, 2, 1 );
 
 <!-- eslint no-undef: "error" -->
 
-```javascript
-var randu = require( '@stdlib/random-base-randu' );
-var round = require( '@stdlib/math-base-special-round' );
-var Float32Array = require( '@stdlib/array-float32' );
-var dsnanmean = require( '@stdlib/stats-base-dsnanmean' );
+```html
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-round@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-float32@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dsnanmean@umd/browser.js"></script>
+<script type="text/javascript">
+(function () {
 
 var x;
 var i;
@@ -206,6 +219,11 @@ console.log( x );
 
 var v = dsnanmean( x.length, x, 1 );
 console.log( v );
+
+})();
+</script>
+</body>
+</html>
 ```
 
 </section>
@@ -301,21 +319,21 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 [arithmetic-mean]: https://en.wikipedia.org/wiki/Arithmetic_mean
 
-[@stdlib/array/float32]: https://github.com/stdlib-js/array-float32
+[@stdlib/array/float32]: https://github.com/stdlib-js/array-float32/tree/umd
 
 [mdn-typed-array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
 
 <!-- <related-links> -->
 
-[@stdlib/stats/base/dnanmean]: https://github.com/stdlib-js/stats-base-dnanmean
+[@stdlib/stats/base/dnanmean]: https://github.com/stdlib-js/stats-base-dnanmean/tree/umd
 
-[@stdlib/stats/base/dsmean]: https://github.com/stdlib-js/stats-base-dsmean
+[@stdlib/stats/base/dsmean]: https://github.com/stdlib-js/stats-base-dsmean/tree/umd
 
-[@stdlib/stats/base/nanmean]: https://github.com/stdlib-js/stats-base-nanmean
+[@stdlib/stats/base/nanmean]: https://github.com/stdlib-js/stats-base-nanmean/tree/umd
 
-[@stdlib/stats/base/sdsnanmean]: https://github.com/stdlib-js/stats-base-sdsnanmean
+[@stdlib/stats/base/sdsnanmean]: https://github.com/stdlib-js/stats-base-sdsnanmean/tree/umd
 
-[@stdlib/stats/base/snanmean]: https://github.com/stdlib-js/stats-base-snanmean
+[@stdlib/stats/base/snanmean]: https://github.com/stdlib-js/stats-base-snanmean/tree/umd
 
 <!-- </related-links> -->
 
