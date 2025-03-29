@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-03-12)
+## Unreleased (2025-03-29)
 
 <section class="features">
 
@@ -34,6 +34,7 @@ This release closes the following issue:
 
 <details>
 
+-   [`1d8b212`](https://github.com/stdlib-js/stdlib/commit/1d8b2124adec6be1f3d639ab0b53146a7539f243) - **refactor:** update paths _(by Aayush Khanna)_
 -   [`9e91f81`](https://github.com/stdlib-js/stdlib/commit/9e91f81aa0353538cb410b8ea72862c08e20c27b) - **feat:** add C `ndarray` interface and refactor implementation for `stats/base/dsnanmean` [(#4395)](https://github.com/stdlib-js/stdlib/pull/4395) _(by Neeraj Pathak, Athan Reines, Aayush Khanna)_
 -   [`fc4a92a`](https://github.com/stdlib-js/stdlib/commit/fc4a92a4a2356e4de3026fcfcfbd6433121851a0) - **refactor:** update paths _(by Aayush Khanna)_
 -   [`ebe88f3`](https://github.com/stdlib-js/stdlib/commit/ebe88f3d87f2e3f0dc9e070bd59e7b9068e483dd) - **chore:** fix C lint errors [(#5206)](https://github.com/stdlib-js/stdlib/pull/5206) _(by GK Bishnoi)_
